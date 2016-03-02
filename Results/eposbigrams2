@@ -1,0 +1,31 @@
+OutputFolder/oposbigrams2
+CLASSIFICATION REPORT
+             precision    recall  f1-score   support
+
+      I-LOC       0.64      0.81      0.72      1447
+     I-MISC       0.58      0.56      0.57      1386
+      I-ORG       0.69      0.54      0.61      1949
+      I-PER       0.77      0.88      0.82      1634
+          O       0.98      0.97      0.98     32735
+
+avg / total       0.93      0.93      0.93     39151
+
+
+CONFUSION MATRIX
+Predicted  I-LOC  I-MISC  I-ORG  I-PER      O    All
+True
+I-LOC       1169      49     86     74     69   1447
+I-MISC       102     775    137     80    292   1386
+I-ORG        321     190   1062    131    245   1949
+I-PER         46      44     31   1443     70   1634
+O            179     269    229    145  31913  32735
+All         1817    1327   1545   1873  32589  39151
+
+CONFUSION MATRIX %
+Predicted      I-LOC     I-MISC      I-ORG      I-PER          O
+True
+I-LOC      64.336819   3.692540   5.566343   3.950881   0.211728
+I-MISC      5.613649  58.402411   8.867314   4.271223   0.896008
+I-ORG      17.666483  14.318011  68.737864   6.994127   0.751787
+I-PER       2.531646   3.315750   2.006472  77.042178   0.214796
+O           9.851403  20.271289  14.822006   7.741591  97.925680

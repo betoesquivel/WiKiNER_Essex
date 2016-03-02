@@ -21,6 +21,7 @@ for tag1, tag2 in re.findall(pattern, output):
     actual_tags.append(tag1.strip())
     predicted_tags.append(tag2.strip())
 
+print sys.argv[1]
 print "CLASSIFICATION REPORT"
 print classification_report(actual_tags, predicted_tags)
 

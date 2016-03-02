@@ -1,0 +1,14 @@
+====Download Stanford POSTagger from:
+http://nlp.stanford.edu/software/stanford-postagger-2015-12-09.zip
+
+====Extract just the tokens from the gold data set:
+./get_text.pl < wikigold.conll.txt > wikigold.conll.tokens.txt
+
+====Tag the token file into my_wikigold_tagged2.txt:
+java -classpath stanford-postagger.jar:lib/slf4j-api.jar:lib/slf4j-simple.jar
+     edu.stanford.nlp.tagger.maxent.MaxentTagger
+     -prop myPropsFile.prop
+     -textFile wikigold.conll.tokens.txt
+
+====Add tags to the gold data and output into new file
+./add_tags.pl my_wikigold_tagged2.txt wikigold.conll.txt > my.wikigold.conll.txt
